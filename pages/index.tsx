@@ -33,7 +33,7 @@ export default function Home() {
         <Item title="Vesuvius Challenge 一週年的感想" date="2024.02.29" />
       </li>
       <li className="flex px-10 justify-between gap-x-6 py-5">
-        <Item title="圖學相關 (標題未定)" date="2024.03.31" />
+        <Item title="自己探索程式和新事物常用的思路" date="2024.03.31" />
       </li>
     </ul>
   );
