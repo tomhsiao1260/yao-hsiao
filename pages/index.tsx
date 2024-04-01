@@ -1,8 +1,22 @@
 import { useRouter } from "next/router";
+//@ts-ignore
+import articles from "../blogs/articles.json";
+import SwitchDarkmode from "@/components/SwitchDarkmode";
 
 interface ItemProps {
   title: string;
   date: string;
+}
+
+export default function Home() {
+  return (
+    <ul role="list" className="divide-y divide-gray-100 px-[240px] py-[20px]">
+      <SwitchDarkmode />
+      {articles?.map((article) => (
+        <Item {...article} />
+      ))}
+    </ul>
+  );
 }
 
 function Item({ title, date }: ItemProps) {
@@ -10,31 +24,16 @@ function Item({ title, date }: ItemProps) {
   const [year, month, day] = date.split(".");
 
   return (
-    <div className="min-w-0 flex-auto">
-      <button
-        type="button"
-        className="text-lg font-semibold leading-6 text-gray-900"
-        onClick={() => router.push(`/${month}-${day}-${year}`)}
-      >
-        {title}
-      </button>
-      <p className="mt-1 truncate text-xs leading-5 text-gray-500">{date}</p>
-    </div>
-  );
-}
-
-export default function Home() {
-  return (
-    <ul role="list" className="divide-y divide-gray-100">
-      <li className="flex px-10 justify-between gap-x-6 py-5">
-        <Item title="那我們開始吧！" date="2024.01.31" />
-      </li>
-      <li className="flex px-10 justify-between gap-x-6 py-5">
-        <Item title="Vesuvius Challenge 一週年的感想" date="2024.02.29" />
-      </li>
-      <li className="flex px-10 justify-between gap-x-6 py-5">
-        <Item title="自己探索程式和新事物常用的思路" date="2024.03.31" />
-      </li>
-    </ul>
+    <li
+      className="flex px-10 justify-between gap-x-6 py-5 hover:bg-gray-100 dark:hover:text-black rounded-md cursor-pointer"
+      onClick={() => router.push(`/${month}-${day}-${year}`)}
+    >
+      <div className="min-w-0 flex-auto">
+        <button type="button" className="text-lg font-semibold leading-6">
+          {title}
+        </button>
+        <p className="mt-1 truncate text-xs leading-5 text-gray-500">{date}</p>
+      </div>
+    </li>
   );
 }
