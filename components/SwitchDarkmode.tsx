@@ -3,13 +3,11 @@ import React, { useEffect, useState } from "react";
 import fuckuhydration from "../utils/fuckuhydration";
 
 export default function SwitchDarkmode() {
-  console.log(typeof window);
-
   const isDarkMode = fuckuhydration()
     ? JSON.parse(localStorage.getItem("is-dark-mode") || "false")
     : false;
 
-  const [isChecked, setIsChecked] = useState(isDarkMode);
+  const [isChecked, setIsChecked] = useState(true);
 
   useEffect(() => {
     if (isChecked) {
