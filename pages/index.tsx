@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { v4 as uuidv4 } from "uuid";
 //@ts-ignore
 import articles from "../blogs/articles.json";
 import SwitchDarkmode from "@/components/SwitchDarkmode";
@@ -13,7 +14,7 @@ export default function Home() {
     <ul role="list" className="divide-y divide-gray-100 px-[240px] py-[20px]">
       <SwitchDarkmode />
       {articles?.map((article) => (
-        <Item {...article} />
+        <Item key={uuidv4()} {...article} />
       ))}
     </ul>
   );
