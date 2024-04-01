@@ -27,10 +27,13 @@ export default function BlogIdPage(props: PageProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const blogsFolders = await fs.readdir(path.join(process.cwd(), blogRootPath));
 
-  const paths = blogsFolders.map(
-    (blogsFolder) => "/" + blogsFolder.split(".")[0]
-  );
-  console.log(paths);
+  const paths = blogsFolders
+    .filter(
+      (blogsFolder) =>
+        !["/articles", "/styles"].includes("/" + blogsFolder.split(".")[0])
+    )
+    .map((blogsFolder) => "/" + blogsFolder.split(".")[0]);
+
   return {
     paths,
     fallback: false,
