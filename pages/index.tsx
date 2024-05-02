@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { v4 as uuidv4 } from "uuid";
 //@ts-ignore
@@ -11,24 +10,10 @@ interface ItemProps {
 }
 
 export default function Home() {
-  const [w, setW] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setW(window.innerWidth > 768 ? 240 : 20);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [w]);
-
   return (
     <ul
       role="list"
-      className={`divide-y divide-gray-100 px-[${w}px] py-[20px]`}
+      className="divide-y divide-gray-100 px-[20px] sm:px-[60px] md:px-[150px] lg:px-[240px] py-[20px]"
     >
       <SwitchDarkmode />
       {articles?.map((article) => (
