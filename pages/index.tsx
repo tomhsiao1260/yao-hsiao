@@ -7,6 +7,7 @@ import SwitchDarkmode from "@/components/SwitchDarkmode";
 interface ItemProps {
   title: string;
   date: string;
+  route: string;
 }
 
 export default function Home() {
@@ -23,14 +24,14 @@ export default function Home() {
   );
 }
 
-function Item({ title, date }: ItemProps) {
+function Item({ title, date, route }: ItemProps) {
   const router = useRouter();
   const [year, month, day] = date.split(".");
 
   return (
     <li
       className="flex px-10 justify-between gap-x-6 py-5 hover:bg-gray-100 dark:hover:text-black rounded-md cursor-pointer"
-      onClick={() => router.push(`/${month}-${day}-${year}`)}
+      onClick={() => router.push(route)}
     >
       <div className="min-w-0 flex-auto">
         <button type="button" className="text-lg font-semibold leading-6">
