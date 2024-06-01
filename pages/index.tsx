@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { v4 as uuidv4 } from "uuid";
 //@ts-ignore
 import articles from "../blogs/articles.json";
-import SwitchDarkmode from "@/components/SwitchDarkmode";
+import Navbar from "@/components/Navbar";
 
 interface ItemProps {
   title: string;
@@ -12,15 +12,17 @@ interface ItemProps {
 
 export default function Home() {
   return (
-    <ul
-      role="list"
-      className="divide-y divide-gray-100 px-[20px] sm:px-[60px] md:px-[150px] lg:px-[240px] py-[20px]"
-    >
-      <SwitchDarkmode />
-      {articles?.map((article) => (
-        <Item key={uuidv4()} {...article} />
-      ))}
-    </ul>
+    <>
+      <Navbar />
+      <ul
+        role="list"
+        className="divide-y divide-gray-100 px-[20px] sm:px-[60px] md:px-[150px] lg:px-[240px] py-[20px]"
+      >
+        {articles?.map((article) => (
+          <Item key={uuidv4()} {...article} />
+        ))}
+      </ul>
+    </>
   );
 }
 

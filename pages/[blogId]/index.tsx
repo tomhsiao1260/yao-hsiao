@@ -4,8 +4,8 @@ import fs from "fs/promises";
 import path from "path";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import SwitchDarkmode from "@/components/SwitchDarkmode";
-import styles from "../../blogs/styles.module.scss";
+import Navbar from "@/components/Navbar";
+import styles from "@/blogs/styles.module.scss";
 
 const blogRootPath = "blogs";
 
@@ -17,10 +17,12 @@ export default function BlogIdPage(props: PageProps) {
   const { source } = props;
 
   return (
-    <div className={styles["blog-page"]}>
-      <SwitchDarkmode />
-      <MDXRemote {...source} />
-    </div>
+    <>
+      <Navbar />
+      <div className={styles["blog-page"]}>
+        <MDXRemote {...source} />
+      </div>
+    </>
   );
 }
 

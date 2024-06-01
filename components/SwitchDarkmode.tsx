@@ -22,14 +22,12 @@ export default function SwitchDarkmode() {
   }, [isChecked]);
 
   return (
-    <div className="absolute top-8 right-8">
-      <Switch
-        checked={isChecked}
-        onCheckedChange={() => {
-          setIsChecked(!isChecked);
-        }}
-        size={"3"}
-      />
-    </div>
+    <Switch
+      checked={isChecked}
+      onCheckedChange={() => {
+        setIsChecked(!isChecked);
+      }}
+      size={"3"}
+    />
   );
 }
