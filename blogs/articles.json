@@ -28,5 +28,10 @@
         "title": "教學和經驗傳承",
         "date": "2024.06.30",
         "route": "teach"
+    },
+    {
+        "title": "寶藏的位置",
+        "date": "2024.07.31",
+        "route": "treasure"
     }
 ]
