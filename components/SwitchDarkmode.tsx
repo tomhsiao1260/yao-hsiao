@@ -1,13 +1,17 @@
 import { Switch } from "@radix-ui/themes";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
 import fuckuhydration from "../utils/fuckuhydration";
 
 export default function SwitchDarkmode() {
   const isDarkMode = fuckuhydration()
-    ? JSON.parse(localStorage.getItem("is-dark-mode") || "false")
-    : false;
+    ? JSON.parse(localStorage.getItem("is-dark-mode") || "true")
+    : true;
 
   const [isChecked, setIsChecked] = useState(true);
+
+  useLayoutEffect(() => {
+    setIsChecked(isDarkMode);
+  }, []);
 
   useEffect(() => {
     if (isChecked) {
