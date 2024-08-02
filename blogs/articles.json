@@ -1,37 +1,44 @@
 [
-    {
-        "title": "那我們開始吧！",
-        "date": "2024.01.31",
-        "route": "hello-world"
-    },
-    {
-        "title": "Vesuvius Challenge 一週年的感想",
-        "date": "2024.02.29",
-        "route": "vc-one-year"
-    },
-    {
-        "title": "自己探索程式和新事物常用的思路",
-        "date": "2024.03.31",
-        "route": "explore"
-    },
-    {
-        "title": "更遠大的目標",
-        "date": "2024.04.30",
-        "route": "goal"
-    },
-    {
-        "title": "一個跟畫畫有關的想像實驗",
-        "date": "2024.05.26",
-        "route": "drawing-imagine"
-    },
-    {
-        "title": "教學和經驗傳承",
-        "date": "2024.06.30",
-        "route": "teach"
-    },
-    {
-        "title": "寶藏的位置",
-        "date": "2024.07.31",
-        "route": "treasure"
-    }
+  {
+    "title": "那我們開始吧！",
+    "date": "2024.01.31",
+    "route": "hello-world",
+    "description": "終於下定決心來寫點什麼了，那我們就開始吧！"
+  },
+  {
+    "title": "Vesuvius Challenge 一週年的感想",
+    "date": "2024.02.29",
+    "route": "vc-one-year",
+    "description": "參加挑戰滿一年了，寫下我當下的感受和學到了什麼"
+  },
+  {
+    "title": "自己探索程式和新事物常用的思路",
+    "date": "2024.03.31",
+    "route": "explore",
+    "description": "在圖學領域探索的魅力在於，跟著開發者的思路讓不可見的狀態變得可見，並在腦海裡逐漸浮現背後的發展脈絡"
+  },
+  {
+    "title": "更遠大的目標",
+    "date": "2024.04.30",
+    "route": "goal",
+    "description": "發現為自己設定更高目標帶來的好處，趁記憶猶新，把自己的觀察記錄下來"
+  },
+  {
+    "title": "一個跟畫畫有關的想像實驗",
+    "date": "2024.05.26",
+    "route": "drawing-imagine",
+    "description": "想像一下，你用一支筆在紙上畫了條線，這跟電繪板上的條線有什麼區別？"
+  },
+  {
+    "title": "教學和經驗傳承",
+    "date": "2024.06.30",
+    "route": "teach",
+    "description": "教學或經驗傳承是一個個溝通橋樑建立的過程，這篇則是寫給自己的造橋指南"
+  },
+  {
+    "title": "寶藏的位置",
+    "date": "2024.07.31",
+    "route": "treasure",
+    "description": ""
+  }
 ]

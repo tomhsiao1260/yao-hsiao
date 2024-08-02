@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { v4 as uuidv4 } from "uuid";
+import Head from "next/head";
 //@ts-ignore
 import articles from "../blogs/articles.json";
 import Navbar from "@/components/Navbar";
@@ -13,6 +14,15 @@ interface ItemProps {
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Yao Hsiao</title>
+        <meta property="og:title" content="Yao Hsiao" key="title" />
+        <meta
+          property="og:description"
+          content="Working on Vesuvius Challenge. Write down thoughts along the way."
+          key="description"
+        />
+      </Head>
       <Navbar />
       <ul
         role="list"
