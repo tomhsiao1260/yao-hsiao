@@ -19,7 +19,7 @@ export default function Home() {
         <meta property="og:title" content="Yao Hsiao" key="title" />
         <meta
           property="og:description"
-          content="Working on Vesuvius Challenge. Write down thoughts along the way."
+          content="Love visual things. Working on Vesuvius Challenge."
           key="description"
         />
       </Head>
