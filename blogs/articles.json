@@ -46,5 +46,11 @@
     "date": "2024.08.27",
     "route": "buffet",
     "description": "好耶，這次自助餐也是一百塊！"
+  },
+  {
+    "title": "淺談古生物",
+    "date": "2024.09.30",
+    "route": "paleontology-overview",
+    "description": "開始對古生物領域感興趣，於是記錄了當下的學習想法，方便日後回顧"
   }
 ]
