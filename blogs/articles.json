@@ -52,5 +52,11 @@
     "date": "2024.09.30",
     "route": "paleontology-overview",
     "description": "開始對古生物領域感興趣，於是記錄了當下的學習想法，方便日後回顧"
+  },
+  {
+    "title": "大智若愚",
+    "date": "2024.10.31",
+    "route": "stay-foolish",
+    "description": "隨著人工智慧越來越聰明，為了能通過圖靈測試，可能得想辦法讓自己看起來不是那麼聰明"
   }
 ]
