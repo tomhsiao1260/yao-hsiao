@@ -9,6 +9,7 @@ interface ItemProps {
   title: string;
   date: string;
   route: string;
+  description: string;
 }
 
 export default function Home() {
