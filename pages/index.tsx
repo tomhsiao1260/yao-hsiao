@@ -36,7 +36,7 @@ export default function Home() {
   );
 }
 
-function Item({ title, date, route }: ItemProps) {
+function Item({ title, date, route, description }: ItemProps) {
   const router = useRouter();
   const [year, month, day] = date.split(".");
 
@@ -46,10 +46,11 @@ function Item({ title, date, route }: ItemProps) {
       onClick={() => router.push(route)}
     >
       <div className="min-w-0 flex-auto">
-        <button type="button" className="text-lg font-semibold leading-6">
+        <button type="button" className="text-2xl font-semibold leading-7">
           {title}
         </button>
-        <p className="mt-1 truncate text-xs leading-5 text-gray-500">{date}</p>
+        <p className="mt-1 truncate text-md leading-10">{description}</p>
+        <p className="mt-1 truncate text-xs leading-7 text-gray-500">{date}</p>
       </div>
     </li>
   );
