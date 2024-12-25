@@ -64,6 +64,12 @@
     "date": "2024.11.26",
     "route": "youbike",
     "description": "YouBike 使用前 30 分鐘免費，實在是太方便了！"
+  },
+  {
+    "title": "最後期限",
+    "date": "2024.12.26",
+    "route": "deadline",
+    "description": "生活中有著大大小小的最後期限，想記錄在這段期間能快速推進的幾個要點"
   }
 ]
 
