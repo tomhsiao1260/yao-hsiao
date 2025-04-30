@@ -13,6 +13,13 @@ interface ItemProps {
 }
 
 export default function Home() {
+  // Sort articles by date in descending order (newest first)
+  const sortedArticles = [...articles].sort((a, b) => {
+    const dateA = new Date(a.date.replace(/\./g, '-'));
+    const dateB = new Date(b.date.replace(/\./g, '-'));
+    return dateB.getTime() - dateA.getTime();
+  });
+
   return (
     <>
       <Head>
@@ -29,7 +36,7 @@ export default function Home() {
         role="list"
         className="divide-y divide-gray-100 px-[20px] sm:px-[60px] md:px-[150px] lg:px-[240px] py-[20px]"
       >
-        {articles?.map((article) => (
+        {sortedArticles?.map((article) => (
           <Item key={uuidv4()} {...article} />
         ))}
       </ul>
