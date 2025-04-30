@@ -88,6 +88,12 @@
     "date": "2025.03.30",
     "route": "bird",
     "description": "笨鳥不笨，你知道鳥類是從恐龍演化來的嗎？"
+  },
+  {
+    "title": "Cursor 使用心得",
+    "date": "2025.04.30",
+    "route": "cursor",
+    "description": "理解和打造是一體兩面的"
   }
 ]
 
