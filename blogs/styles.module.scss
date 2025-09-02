@@ -94,14 +94,46 @@
   }
 
   blockquote {
-    margin: 1.5rem 0;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #e5e7eb;
-    background-color: #f9fafb;
-    color: #4b5563;
+    margin: 2rem 0;
+    padding: 2rem 2.5rem;
+    border-left: 4px solid #d1d5db;
+    background-color: #f8fafc;
+    color: #475569;
+    position: relative;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    &::before {
+      content: '"';
+      font-size: 5rem;
+      color: #cbd5e1;
+      position: absolute;
+      top: -0.5rem;
+      left: 1rem;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+
+    &::after {
+      content: '"';
+      font-size: 5rem;
+      color: #cbd5e1;
+      position: absolute;
+      bottom: -2rem;
+      right: 1rem;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
 
     p {
       margin: 0;
+      padding-left: 3rem;
+      padding-right: 2rem;
+      position: relative;
+      z-index: 1;
     }
   }
 
@@ -177,9 +209,14 @@
     }
 
     blockquote {
-      border-left-color: #374151;
-      background-color: #1f2937;
-      color: #d1d5db;
+      border-left-color: #4b5563;
+      background-color: #1e293b;
+      color: #cbd5e1;
+
+      &::before,
+      &::after {
+        color: #64748b;
+      }
     }
 
     code {
