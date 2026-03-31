@@ -153,7 +153,13 @@
     "title": "聊聊指數",
     "date": "2026.02.28",
     "route": "exponential",
-    "description": "我們有辦法更直觀的感受到指數的增長嗎？"
-  }
+    "description": "我們有辦法感受到指數的增長嗎？"
+  },
+  {
+    "title": "聊聊壓縮與 Ilya Sutskever's Top 30",
+    "date": "2026.03.31",
+    "route": "compress",
+    "description": "這很複雜但很有趣，對吧？"
+  }  
 ]
 
