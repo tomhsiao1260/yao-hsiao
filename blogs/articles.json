@@ -150,16 +150,22 @@
     "description": "一些尚未被捕捉，讓人會心一笑的插曲"
   },
   {
-    "title": "聊聊指數",
+    "title": "指數",
     "date": "2026.02.28",
     "route": "exponential",
     "description": "我們有辦法感受到指數的增長嗎？"
   },
   {
-    "title": "聊聊壓縮與 Ilya Sutskever's Top 30",
+    "title": "壓縮與 Ilya Sutskever's Top 30",
     "date": "2026.03.31",
     "route": "compress",
     "description": "這很複雜但很有趣，對吧？"
-  }  
+  },
+  {
+    "title": "問題與學習",
+    "date": "2026.04.30",
+    "route": "question",
+    "description": "問題怎麼在學習的過程中發揮作用？"
+  }
 ]
 
