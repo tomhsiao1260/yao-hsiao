@@ -166,6 +166,12 @@
     "date": "2026.04.30",
     "route": "question",
     "description": "問題怎麼在學習的過程中發揮作用？"
+  },
+  {
+    "title": "恐懼",
+    "date": "2026.05.30",
+    "route": "fear-cockroach",
+    "description": "每到夏天，人們便想起了被蟑螂支配的恐懼"
   }
 ]
 
