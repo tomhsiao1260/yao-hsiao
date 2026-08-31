@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import "@/styles/globals.scss";
 import "@radix-ui/themes/styles.css";
+import "katex/dist/katex.min.css";
 import { Theme } from "@radix-ui/themes";
 
 export default function App({ Component, pageProps }: AppProps) {

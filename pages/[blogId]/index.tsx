@@ -5,6 +5,8 @@ import fs from "fs/promises";
 import path from "path";
 import articles from "../../blogs/articles.json";
 import { serialize } from "next-mdx-remote/serialize";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Navbar from "@/components/Navbar";
 import styles from "@/blogs/styles.module.scss";
@@ -71,6 +73,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
     path.join(process.cwd(), blogRootPath, `${blogId}.mdx`)
   );
 
-  const mdxSource = await serialize(source);
+  const mdxSource = await serialize(source, {
+    mdxOptions: {
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatex],
+    },
+  });
+
   return { props: { source: mdxSource, article } };
 };

@@ -14,10 +14,13 @@
     "@next/mdx": "^14.1.0",
     "@radix-ui/themes": "^3.0.1",
     "@types/mdx": "^2.0.11",
+    "katex": "^0.18.4",
     "next": "14.1.0",
     "next-mdx-remote": "^6.0.0",
     "react": "^18",
     "react-dom": "^18",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
