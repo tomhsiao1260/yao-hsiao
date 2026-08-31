@@ -194,6 +194,20 @@
       font-weight: 600;
     }
   }
+
+  // KaTeX math display
+  :global(.katex-display) {
+    display: block;
+    text-align: center;
+  }
+
+  :global(.katex .msupsub) {
+    font-size: 0.75em;
+  }
+
+  :global(.katex-display > .katex) {
+    white-space: nowrap;
+  }
 }
 
 // Dark mode styles
