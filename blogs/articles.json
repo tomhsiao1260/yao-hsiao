@@ -190,6 +190,12 @@
     "date": "2026.08.31",
     "route": "general-relativity",
     "description": "一些感受和一些啟發"
+  },
+  {
+    "title": "Claude Code 使用心得",
+    "date": "2026.09.29",
+    "route": "claude-code",
+    "description": "一些 AI 帶給我的震撼"
   }
 ]
 
