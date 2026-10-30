@@ -16,6 +16,11 @@ export default function SwitchDarkmode() {
   };
 
   return (
-    <Switch checked={isChecked} onCheckedChange={onCheckedChange} size={"3"} />
+    <Switch
+      aria-label="切換深色模式"
+      checked={isChecked}
+      onCheckedChange={onCheckedChange}
+      size={"3"}
+    />
   );
 }

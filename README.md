@@ -15,8 +15,8 @@ Open [http://localhost:3000](http://localhost:3000) to see the site.
 
 ```bash
 npm run dev        # start the development server
-npm run build      # generate sitemap and RSS, then build all pages for production
-npm run start      # serve the production build
+npm run build      # generate sitemap and RSS, then export static files to out/
+npx serve out      # preview the production build
 npm run lint       # run ESLint
 npx tsc --noEmit   # run the type check
 ```

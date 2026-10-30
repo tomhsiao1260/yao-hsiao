@@ -6,8 +6,10 @@
     "dev": "next dev",
     "prebuild": "node scripts/generate-feeds.js",
     "build": "next build",
-    "start": "next start",
     "lint": "next lint"
+  },
+  "overrides": {
+    "katex": "$katex"
   },
   "dependencies": {
     "@radix-ui/themes": "^3.0.1",

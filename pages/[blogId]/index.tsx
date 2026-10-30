@@ -40,8 +40,15 @@ export default function BlogIdPage(props: PageProps) {
         <meta property="og:title" content={article?.title} key="title" />
         <meta
           property="og:description"
-          content={article?.description.slice(0, 100)}
+          content={article?.description.slice(0, 160)}
           key="description"
+        />
+        <meta property="og:site_name" content={site.title} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={article?.title} />
+        <meta
+          name="twitter:description"
+          content={article?.description.slice(0, 160)}
         />
       </Head>
       <Navbar />

@@ -33,8 +33,13 @@ export default function Home() {
           content={site.description}
           key="description"
         />
+        <meta property="og:site_name" content={site.title} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={site.title} />
+        <meta name="twitter:description" content={site.description} />
       </Head>
       <Navbar />
+      <h1 className="sr-only">{site.title}</h1>
       <ul
         role="list"
         className="divide-y divide-gray-100 px-[20px] sm:px-[60px] md:px-[150px] lg:px-[240px] py-[20px]"
