@@ -48,14 +48,11 @@ export default function BlogIdPage(props: PageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const blogsFolders = await fs.readdir(path.join(process.cwd(), blogRootPath));
+  const blogsFiles = await fs.readdir(path.join(process.cwd(), blogRootPath));
 
-  const paths = blogsFolders
-    .filter(
-      (blogsFolder) =>
-        !["/articles", "/styles"].includes("/" + blogsFolder.split(".")[0])
-    )
-    .map((blogsFolder) => "/" + blogsFolder.split(".")[0]);
+  const paths = blogsFiles
+    .filter((blogsFile) => path.extname(blogsFile) === ".mdx")
+    .map((blogsFile) => "/" + path.basename(blogsFile, ".mdx"));
 
   return {
     paths,

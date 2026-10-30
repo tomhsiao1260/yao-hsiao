@@ -1,37 +1,21 @@
 import { Switch } from "@radix-ui/themes";
-import React, { useEffect, useState, useLayoutEffect } from "react";
-import fuckuhydration from "../utils/fuckuhydration";
+import React, { useEffect, useState } from "react";
 
 export default function SwitchDarkmode() {
-  const isDarkMode = fuckuhydration()
-    ? JSON.parse(localStorage.getItem("is-dark-mode") || "true")
-    : true;
-
   const [isChecked, setIsChecked] = useState(true);
 
-  useLayoutEffect(() => {
-    setIsChecked(isDarkMode);
+  // The theme class is already set by the inline script in _document.tsx
+  useEffect(() => {
+    setIsChecked(document.documentElement.classList.contains("dark"));
   }, []);
 
-  useEffect(() => {
-    if (isChecked) {
-      // 黑暗
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("is-dark-mode", "true");
-    } else {
-      // 亮色
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("is-dark-mode", "false");
-    }
-  }, [isChecked]);
+  const onCheckedChange = (checked: boolean) => {
+    setIsChecked(checked);
+    document.documentElement.classList.toggle("dark", checked);
+    localStorage.setItem("is-dark-mode", String(checked));
+  };
 
   return (
-    <Switch
-      checked={isChecked}
-      onCheckedChange={() => {
-        setIsChecked(!isChecked);
-      }}
-      size={"3"}
-    />
+    <Switch checked={isChecked} onCheckedChange={onCheckedChange} size={"3"} />
   );
 }
