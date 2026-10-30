@@ -20,10 +20,14 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(255, 255, 255);
   height: 100vh;
+}
 
-  &::-webkit-scrollbar {
-    width: 0px;
-  }
+html {
+  scrollbar-width: thin;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 @layer utilities {

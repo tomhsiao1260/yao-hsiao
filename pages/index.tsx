@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import articles from "../blogs/articles.json";
+import site from "../site.config.json";
 import Navbar from "@/components/Navbar";
 
 interface ItemProps {
@@ -21,11 +22,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Yao Hsiao</title>
-        <meta property="og:title" content="Yao Hsiao" key="title" />
+        <title>{site.title}</title>
+        <meta name="description" content={site.description} />
+        <link rel="canonical" href={`${site.url}/`} />
+        <meta property="og:url" content={`${site.url}/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={site.title} key="title" />
         <meta
           property="og:description"
-          content="Love visual things. Working on Vesuvius Challenge."
+          content={site.description}
           key="description"
         />
       </Head>

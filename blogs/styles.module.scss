@@ -187,6 +187,28 @@
     border-radius: 8px;
   }
 
+  // Two images side by side, stacked on phones
+  :global(.image-pair) {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    img {
+      flex: 1 1 0;
+      min-width: 0;
+      margin: 0;
+    }
+
+    @media (max-width: 639px) {
+      flex-direction: column;
+
+      img {
+        flex: none;
+        width: 100%;
+      }
+    }
+  }
+
   table {
     width: 100%;
     margin: 1.5rem 0;

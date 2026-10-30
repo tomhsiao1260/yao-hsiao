@@ -13,8 +13,15 @@ try {
 
 export default function Document() {
   return (
-    <Html lang="en">
-      <Head />
+    <Html lang="zh-Hant">
+      <Head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Yao Hsiao"
+          href="/rss.xml"
+        />
+      </Head>
       <body>
         <script dangerouslySetInnerHTML={{ __html: setThemeScript }} />
         <Main />

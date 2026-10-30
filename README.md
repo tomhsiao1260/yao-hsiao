@@ -1,40 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Yao Hsiao's Blog
+
+Personal blog built with Next.js (Pages Router), TypeScript, Tailwind CSS and MDX. Math is rendered with KaTeX, and every page is statically generated at build time.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the site.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Commands
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm run dev        # start the development server
+npm run build      # generate sitemap and RSS, then build all pages for production
+npm run start      # serve the production build
+npm run lint       # run ESLint
+npx tsc --noEmit   # run the type check
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+blogs/                       articles (.mdx), article index and article styles
+components/                  shared React components
+pages/index.tsx              article list
+pages/[blogId]/index.tsx     article page
+public/blogs/<route>/        images for each article
+scripts/generate-feeds.js    generates sitemap.xml and rss.xml at build time
+site.config.json             site URL, title and description
+styles/globals.scss          global styles
+```
 
-## Learn More
+## Adding an Article
 
-To learn more about Next.js, take a look at the following resources:
+1. Create `blogs/<route>.mdx`.
+2. Add an entry to `blogs/articles.json`. The `route` must match the file name without its extension, and `date` uses the `YYYY.MM.DD` format.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```json
+   {
+     "title": "Article title",
+     "date": "2026.01.31",
+     "route": "article-route",
+     "description": "One sentence shown on the article list."
+   }
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Put images in `public/blogs/<route>/` and reference them as `/blogs/<route>/image-name.jpg`.
+4. To show two images side by side, wrap them in `<p className="image-pair">`. They stack vertically on phones.

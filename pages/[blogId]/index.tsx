@@ -4,6 +4,7 @@ import Head from "next/head";
 import fs from "fs/promises";
 import path from "path";
 import articles from "../../blogs/articles.json";
+import site from "../../site.config.json";
 import { serialize } from "next-mdx-remote/serialize";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
@@ -32,6 +33,10 @@ export default function BlogIdPage(props: PageProps) {
     <>
       <Head>
         <title>{article?.title}</title>
+        <meta name="description" content={article?.description.slice(0, 160)} />
+        <link rel="canonical" href={`${site.url}/${article?.route}`} />
+        <meta property="og:url" content={`${site.url}/${article?.route}`} />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={article?.title} key="title" />
         <meta
           property="og:description"
